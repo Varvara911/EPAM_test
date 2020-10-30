@@ -14,18 +14,18 @@ public class Main {
         String str2 = scanner.nextLine();
 
         do {
-            System.out.println("Выберете метод работы: /n   1 сортировка /n  2 счетчики");
+            System.out.println("Выберете метод работы: \n   1 сортировка \n  2 счетчики");
             i = scanner.nextInt();
         } while ((i != 2) && (i != 1));
         switch (i){
-            case 1: {
+            case 1:
                 anagram = permutation(sorting(str1), sorting(str2));
                 System.out.println("строки совпадают? => " + anagram);
-            };
-            case 2: {
+                break;
+            case 2:
                 anagram = permute(sorting(str1), sorting(str2));
                 System.out.println("строки совпадают? => " + anagram);
-            }
+            break;
         }
 
         scanner.close();
